@@ -1,0 +1,182 @@
+@import 'colours';
+.spacing-top-mid {
+  padding-top: 20px;
+}
+
+hr {
+  height: 1px;
+  border: 0;
+  background-color: $horizontal-rule;
+}
+
+.sl-red-left-outline {
+  border-left: 3px solid $govuk-error-colour;
+  padding-left: 15px;
+  padding-right: 15px;
+  @media (max-width: 767px) {
+    margin-top: 10px;
+  }
+}
+
+.govuk-error-summary__list a,
+.govuk-error-summary__list a:visited {
+  color: $error-colour;
+}
+
+.govuk-error-summary__list a {
+  font-weight: 700;
+  font-family: 'GDS Transport', arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-decoration: underline;
+  text-decoration-thickness: max(1px, 0.0625rem);
+  text-underline-offset: 0.1em;
+}
+
+.govuk-error-message {
+  color: $error-colour;
+}
+
+.no-padding-left {
+  padding-left: 0;
+}
+
+.no-padding-right {
+  padding-right: 0;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.spacing-top-mid {
+  padding-top: 20px;
+}
+
+.spacing-bottom-mid {
+  padding-bottom: 20px;
+}
+
+.sl-third-heading {
+  padding-top: 20px;
+  font-size: 1.26em;
+}
+
+h3,
+.sl-third-heading {
+  margin: 0;
+  color: $govuk-text-colour;
+  padding-bottom: 15px;
+  font-size: 1.26em;
+}
+
+.tooltip {
+  position: fixed;
+  z-index: 999;
+  background-color: $dark-grey;
+  color: $white;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: 'GDS Transport', arial, sans-serif;
+  letter-spacing: 0.06rem;
+}
+
+// tooltip arrow pointer
+.arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 10px solid #333;
+  bottom: -4px;
+  left: calc(50% - 5px);
+  transform: translateY(50%);
+}
+// disable click whilst loading
+.disable-click {
+  pointer-events: none;
+}
+
+.loading {
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #000;
+  z-index: -1;
+}
+/* .loading screen is visible when app is not bootstrapped yet, app-root is empty */
+app-root:empty + .loading {
+  opacity: 1;
+  z-index: 100;
+}
+
+//---- Loading bar
+$green: #1d70b8;
+$gray-light: #eef1f3;
+$bar-size: 5px;
+$bar-radius: 60px;
+$bar-bg: govuk-colour('blue');
+
+@keyframes loader {
+  0% {
+    width: 0;
+  }
+  20% {
+    width: 10%;
+  }
+  25% {
+    width: 24%;
+  }
+  43% {
+    width: 41%;
+  }
+  56% {
+    width: 50%;
+  }
+  66% {
+    width: 52%;
+  }
+  71% {
+    width: 60%;
+  }
+  75% {
+    width: 76%;
+  }
+  94% {
+    width: 86%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.progress-bar {
+  border-radius: $bar-radius;
+  overflow: hidden;
+  width: 100%;
+  span {
+    display: block;
+  }
+}
+
+.progress {
+  animation: loader 9s ease-in forwards;
+  background: $green;
+  color: #d8000c;
+  padding: $bar-size;
+  width: 0;
+}
+
+.progress-bar {
+  left: 50%;
+  max-width: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate3d(-50%,-50%,0);
+}

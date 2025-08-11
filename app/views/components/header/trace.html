@@ -1,0 +1,67 @@
+<div id="topofpage">
+    <a
+      href="#maincontent"
+      class="govuk-skip-link"
+      (click)="skipToMainContent($event)"
+      (keydown.space)="skipToMainContent($event)"
+      tabindex="0"
+      role="link"
+      >Skip to main content</a
+    >
+  </div>
+
+      <div class="sticky-header">
+        <header
+          class="sl-govuk-header sl-not-printable"
+          role="banner"
+          data-module="govuk-header">
+          <div
+            class="govuk-header__container app-width-container sl-header-color-production home-width">
+            <div class="sl-flex-row sl-nav-wrapper">
+              <div style="width: 100%">
+                <div
+                  class="govuk-header__logo"
+                  style="display: inline-block; padding-right: 0">
+                  <a
+                    tabindex="0"
+                    role="link"
+                    *ngIf="model.headerBarConfig.EnableHomePageLink"
+                    href="./"
+                    class="govuk-header__link govuk-header__link--homepage">
+                    <span class="govuk-header__logotype">
+                      <span class="sl-logo-text">One view</span>
+                    </span>
+                  </a>
+                </div>
+
+
+  
+                {# TODO: app search 
+                <app-nino-search
+                  [isHomePage]="false"
+                  *ngIf="model.headerBarConfig.NinoSearchBar"></app-nino-search>
+                #}
+                <div
+                  class="sl-flex-row sl-flex-gap-5 sl-nav-align-center app-menu-container">
+
+                  {%
+                    include "../menu/menu.component.html"
+                  %}
+                  {# TODO: menu 
+                  <app-menu *ngIf="model.headerBarConfig.Menu"></app-menu>
+                #}
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+  
+        <div class="phase-banner-container">
+          <div class="app-width-container govuk-phase-banner sl-not-printable home-width">
+            <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag"> BETA </strong><span
+                class="govuk-phase-banner__text"> This is a new service - your <a class="govuk-link" href="/feedback-page">
+                  feedback</a> will help us to improve it. </span></p>
+          </div>
+        </div>
+
+  </div>

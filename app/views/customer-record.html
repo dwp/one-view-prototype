@@ -1,0 +1,27 @@
+{% extends "layouts/ui.html" %}
+
+{% from "./components/box/box.component.njk" import uiBox %}
+
+<!-- {% set pageName="Customer record" %} -->
+
+{% block main %}
+
+<main id="maincontent" role="main" class="sl-content customer-record-parent">
+    {# page blocks #}
+
+    {% include "parts/_interactions.html" %}
+
+    {% include "parts/_personal-details.html" %}
+    
+    {% include "parts/_address.html" %}
+
+    {% include "parts/_contact.html" %}
+
+    {% include "parts/_interests.html" %}
+
+    {% include "parts/_benefits.html" %}
+
+    {% include "parts/_relationships.html" %}
+</main>
+
+{% endblock %}

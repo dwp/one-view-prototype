@@ -7,18 +7,24 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    {% include "govuk-prototype-kit/includes/homepage-top.njk" %}
-
     <h1 class="govuk-heading-xl">
       {{ serviceName }}
     </h1>
 
+    <!-- No prototype documentation yet...
+    <p>
+      <a href="/docs">Component documentation</a>
+    </p> -->
+    <p class="govuk-body">Page list:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>
+        <a class="govuk-link" href="/home">Home</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="/customer-record">Customer record</a>
+      </li>
+    </ul>
 
-      {{ govukButton({
-          text: "Continue",
-          href: "example/where-do-you-live"
-        }) }}
-    {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}
   </div>
 </div>
 

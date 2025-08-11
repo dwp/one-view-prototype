@@ -1,0 +1,34 @@
+<footer class="govuk-footer sl-not-printable" role="contentinfo">
+  <div class="app-width-container home-width">
+    <div
+      class="govuk-footer__meta">
+      <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+        <p id="sl-footer-feedback" class="govuk-!-font-weight-bold">
+          This is a new service - your
+          <a class="govuk-link" [routerLink]="['/feedback-page']">feedback</a>
+          will help us improve it.
+        </p>
+        <p id="sl-footer-accessibility" class="govuk-!-font-weight-bold">
+          <span>Read our </span
+          ><a class="govuk-link" [routerLink]="['app-accessibility-statement']"
+            >Accessibility Statement</a
+          >.
+        </p>
+
+        <div class="govuk-footer__meta-custom" id="sl-footer-digital">
+          Built by DWP Digital.
+        </div>
+
+        <app-user-role-indicator></app-user-role-indicator>
+      </div>
+
+      <div
+        class="govuk-footer__meta-item"
+        style="text-align: center"
+        id="sl-footer-version"
+        [attr.data-qa]="'sl-footer-version'">
+        <span>© Copyright{{ this.version }}</span>
+      </div>
+    </div>
+  </div>
+</footer>

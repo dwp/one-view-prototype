@@ -1,0 +1,139 @@
+$border-width : 3px
+
+.border-focus
+    border: $border-width solid $govuk-focus-colour
+
+.nino-search-container 
+  font-family: "GDS Transport", arial, sans-serif
+  position: relative
+  display: inline-block
+  width: 640px
+  color: white
+  z-index: 1
+
+@media only screen and (max-width: 1040px) 
+    .nino-search-container
+        width: 100%
+        position: absolute
+        display: block
+        left: 2.5%
+    #nino-search-input 
+        font-size: 100%
+        padding-left: 0%
+
+@media only screen and (max-width: 640px) 
+  .nino-clear-button
+    top: 8px !important
+  .search-dropbox-position
+    top: 35px !important
+
+.nino-clear-button
+    position: absolute
+    border: 1px solid transparent
+    background-color: govuk-colour("white")
+    padding-left: 2px
+    padding-right: 2px
+    right: 17%
+    top: 10px
+    color: govuk-colour("mid-grey")
+
+.nino-clear-button:focus 
+    outline: none !important
+    border: 1px solid $govuk-focus-colour
+
+.nino-search-button
+    background-color: govuk-colour("dark-grey")
+    color: govuk-colour("white") 
+    border: $border-width solid transparent
+    font-size: 115%
+    padding-top: 1%
+    padding-bottom: 1%
+
+.nino-search-button:focus 
+    outline: none !important
+    padding-left: 10px
+    font-size: 115%
+    padding-top: 1%
+    padding-bottom: 1%
+    @extend .border-focus
+
+.nino-search-input
+    padding-top: 1%
+    padding-bottom: 1%
+    padding-left: 10px
+    min-width: 85%
+    border: $border-width solid transparent
+    font-size: 115%
+
+.nino-search-container > div
+  min-width: calc(100% - 143px)
+
+.nino-search-input-error
+    outline: none !important
+    border: $border-width solid	$govuk-error-colour !important
+
+.nino-search-input:focus 
+    outline: none !important
+    @extend .border-focus
+
+.nino-search-container > div
+    min-width: 88%
+
+.headerBar
+    position: absolute
+    top: 43px
+    min-width: calc(100% - 172px)
+    max-width: calc(100% - 172px)
+
+.homePage
+    position: relative 
+    top: 1px
+    min-width: calc(100% - 172px)
+    max-width: calc(100% - 172px)
+
+
+.search-dropbox-position
+    position: absolute
+    top: 43px
+    min-width: calc(100% - 172px)
+    max-width: calc(100% - 172px)
+
+.search-dropbox
+    word-break: break-word
+    overflow: auto
+    padding: 20px
+    min-height: 105px
+    background-color: govuk-colour("white") 
+    color: black
+    line-height: normal
+    text-align: left
+    border: $border-width solid transparent
+    box-shadow: 0 3px 6px rgb(0 0 0 / 39%)
+
+.search-dropbox:focus
+    outline: none !important
+    @extend .border-focus
+
+.search-dropbox:hover
+    outline: none !important
+    border: 3px solid $govuk-focus-colour
+    background-color:  govuk-colour("light-grey")
+
+.nino-summary-name
+  color: $govuk-link-colour
+  font-size: 1.69em
+  font-weight: 700
+  margin-top: -10px !important
+  margin-bottom: -10px !important
+    
+.nino-summary 
+    font-size: 1em
+    color: #6b5f46
+
+.postcode-summary 
+    font-size: 1em
+    color: #6b5f46
+
+.error-text
+  color: $govuk-error-colour
+  font-weight: 700

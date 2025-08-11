@@ -1,0 +1,56 @@
+<div
+id="account-summary-container"
+class="summary-banner"
+{# other classes 
+[ngClass]="{
+  'is-deceased': model.ninoSummary?.isDeceased,
+  'is-potentially-violent':
+    model?.ninoSummary?.isPotentiallyViolent &&
+    !model?.ninoSummary?.isDeceased,
+  'summary-banner': model?.ninoSummary?.notDeceasedNotViolent,
+}" #}>
+<!-- Summary data -->
+<div class="content">
+  <h1
+    class="govuk-heading-s"
+    id="account-summary-header"
+    attr.aria-label="Account {{ fullName  | d("JOHN SMITH")}}.">
+    {{ fullName  | d("JOHN SMITH")}}
+  </h1>
+
+  <span
+    class="govuk-body"
+    id="account-summary-body"
+    [attr.data-qa]="'account-summary-body'">
+    <span aria-hidden="true">{{
+      nino | d("QQ 11 22 33 C")
+    }}</span>
+    <span class="visible-hidden">{{
+      nino | d("QQ 11 22 33 C")
+    }}</span>
+    · {{ dob | d("15 Oct 1971" )}} · {{ age | d("54" )}}
+  </span>
+</div>
+</div>
+
+{#
+<!-- loading -->
+<div class="summary-banner" *ngIf="model.isLoading">
+<div
+  id="sl-placeholder"
+  class="content"
+  [attr.data-qa]="'account-summary-loading-container'">
+  <div class="primary-name spacing-top-single-half">
+    <div style="padding-top: 3px">
+      <div
+        class="secondary-animated-background secondary-name-placeholder"></div>
+    </div>
+
+    <div style="padding-top: 5px; padding-bottom: 3px">
+      <div
+        class="primary-animated-background primary-name-placeholder"></div>
+    </div>
+  </div>
+</div>
+</div>
+#}

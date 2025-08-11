@@ -4,3 +4,365 @@
 // 
 
 // Add extra styles here
+
+
+
+@import "font-awesome-4.7.0/css/font-awesome.min";
+@import "app/styles.sass";
+
+
+@import "../../views/components/header/app-header.component.sass";
+@import "../../views/components/header/jumbo.sass";
+@import "../../views/components/nino-search/nino-search.component.sass";
+@import "../../views/components/menu/menu.component.sass";
+
+@import "../../views/components/footer/footer.scss";
+
+/* components */
+
+@import "../../views/components/account-navigation/account-navigation.component.scss";
+@import "../../views/components/summary/account-summary.component.scss";
+
+/* contact record */
+
+@import "dwp-keydetailbar";
+@import "navigation/header-navigation";
+@import "navigation/header-navigation-v2";
+
+
+/*  body {
+    background: $gray-light !important;
+  }How do we change the background for micro sites like Make contact record */
+
+.body--grey-background {
+    background: $gray-light !important;
+  }
+
+.sl-primary-card__wrapper {
+    margin-top: 10px;
+    padding-top: 40px;
+}
+
+.govuk-phase-banner__content__tag {
+    background-color: #1d70b8;
+    color: white;
+    font-weight: bold;
+}
+
+.govuk-phase-banner__home {
+    border-bottom: 0px;
+}
+
+.govuk-header__logo {
+    margin-bottom: 0px;
+    margin-top: 5px;
+}
+
+/* Anything below here probably doesn't belong here but is working right now - speak to Colin about where they really belong */
+
+.address-change-view {
+    float: right;
+}
+
+.address-block {
+    font-weight: 700;
+}
+
+.view-maintenance-link-container {
+    text-align: right;
+}
+
+/* Interests styles - bottom borders still showing - */
+
+.interest-service {
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.interest-type-system, .interest-type-clerical {
+    background-color: #1d70b8;
+}
+
+.interest-type-crl {
+    background-color: #0b0c0c;
+}
+
+.interest-type, .interest-type-crl, .interest-type-clerical, .interest-type-system {
+    font-weight: 700;
+    color: #fff;
+    padding: 2px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: .84em;
+    vertical-align: 10%;
+    margin-left: 5px;
+    text-align: center;
+}
+
+.current-start-cell {
+    width: 33%;
+}
+
+.current-interest-cell {
+    width: 47%;
+}
+
+.current-third-cell {
+    width: 20%;
+}
+
+.previous-start-cell {
+    width: 18%;
+}
+
+.previous-end-cell {
+    width: 10%;
+}
+
+.previous-interest-cell {
+    width: 44%;
+}
+
+.previous-third-cell {
+    width: 20%;
+}
+
+/* Colleague view styles */
+
+.govuk-header__link, .dwp-header__link
+ {
+    text-decoration: none;
+}
+
+.dwp-header__service-name {
+    font-size: 1.5rem;
+    line-height: 1.25;
+    font-weight: 700;
+    font-family: "GDS Transport", arial, sans-serif;
+}
+
+.govuk-header__link:link, .dwp-header__link:link, .govuk-header__link:visited, .dwp-header__link:visited {
+    color: #ffffff;
+}
+
+.dwp-header__content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px 0;
+}
+
+.govuk-template__body_cv {
+    margin: 0;
+    background-color: #ffffff;
+}
+
+.govuk-footer {
+    font-family: "GDS Transport", arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.1428571429;
+    padding-top: 25px;
+    padding-bottom: 15px;
+    border-top: 1px solid #b1b4b6;
+    color: #0b0c0c;
+    background: #f3f2f1;
+}
+
+.colleague-view-benefit-list{
+    width: auto;
+    text-align: left;
+    font-weight: 600;
+}
+
+.govuk-summary-list__row th, .govuk-summary-list__row td {
+    text-align: left;
+    vertical-align: top;
+}
+
+/* Home styles - */
+.home-width {
+    margin-left: 14%;
+    margin-right: 14%;
+}
+
+.dfe-card {
+    position: relative;
+    display: flex
+;
+    flex-direction: column;
+    background-color: #ffffff;
+    border: 1px solid #b1b4b6;
+    max-width: 400px;
+}
+
+.dfe-card-container {
+    padding: 24px;
+    display: flex
+;
+    flex-grow: 1;
+    flex-direction: column;
+}
+
+@media (min-width: 40.0625em) {
+    .dfe-grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 30px;
+      padding-bottom: 40px;
+    }}
+
+    .dfe-card:focus-within {
+        outline: 3px solid #ffdd00;
+    }
+    
+    .dfe-card:hover,
+    .dfe-card:focus-within {
+        background-color: #1d70b8;
+        /* background-color: #003a69; */
+    }
+
+    .dfe-card:hover a,
+    .dfe-card:focus-within a,
+    .dfe-card:hover p,
+    .dfe-card:focus-within p,
+    .dfe-card:hover .govuk-heading-m,
+    .dfe-card:focus-within .govuk-heading-m {
+        color: #ffffff;
+    }
+
+    .ov-home-card-heading{
+        margin-top: 30px;
+    }
+
+    .jumbotron-link{
+        margin-top: 20px;
+        font-size: 19px;
+    }
+   
+
+    .jumbotron-link a {
+        color: #ffffff;
+    }
+
+    .ov-logo a {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 28px;
+        }
+
+
+        /* Trace page styles */
+
+        .sl-content__trace {
+            margin-top: 3%;
+        }
+
+        .pane {
+            margin-bottom: 50px;
+        }
+
+        /* Benefit payments customer record styles */
+        .benefits-payments-table-cell {
+            padding-top: 40px !important; 
+            padding-bottom: 40px !important;
+        }
+
+        /* Benefit payments styles */
+        .gem-c-big-number__value {
+            font-family: "GDS Transport", arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-weight: 700;
+            line-height: 1;
+            font-size: 80px;
+            font-size: 5rem;
+        }
+
+        .nhsuk-card__content > * :first-child {
+            margin-top: 0;
+        }
+
+        .gem-c-big-number__label {
+            font-family: "GDS Transport", arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-weight: 700;
+            font-size: 16px;
+            font-size: 1rem;
+            line-height: 1.25;
+        }
+
+        .gem-c-big-number{
+            margin-bottom: 15px;
+            color: #0b0c0c;
+        }
+
+        .nhsuk-card {
+            margin-bottom: 40px;
+            background: #fff;
+            border: 1px solid #d8dde0;
+            position: relative;
+            width: 100%;
+        }
+
+        @media (min-width: 40.0625em) {
+            .nhsuk-card__content{
+                padding: 20px;
+            }}
+
+        @media (min-width: 40.0625em) {
+            .gem-c-big-number__label {
+                font-size: 19px;
+                font-size: 1.1875rem;
+                line-height: 1.3157894737;
+            }
+        }
+
+        .nhsuk-card {
+            position: relative;
+        }
+
+        .nhsuk-card a::before {
+            content: "";
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+        }
+
+        .nhsuk-card__content {
+            padding: 20px;
+        }
+
+        .ov-back-to-customer-record {
+            color: #1d70b8 !important;
+        }
+
+        .payment-details-table td, .payment-details-table th {
+            padding: 10px 10px 10px 0;
+        }
+
+
+        /* Customer record H2 offset for sticky */
+
+        h2{ position:relative; }
+        h2 span{ position:absolute; top:-230px;}
+
+        a.anchor {
+            display: block;
+            position: relative;
+            top: -250px;
+            visibility: hidden;
+        }
+
+        .customer-record-parent > *:last-child {
+            padding-bottom: 80px;
+        }
+        
+        
+

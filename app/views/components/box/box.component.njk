@@ -1,0 +1,11 @@
+{% macro uiBox(name, heading, content) %}
+    <div class="sl-primary-card__wrapper">
+        <h2 tabindex="-1" id="{{ id }}" class="maincontent govuk-heading-l scroll-margin-xl">{{ heading }}</h2>
+
+        <div class="sl-primary-card">
+            <div>
+                {{ content | safe }}
+            </div>
+        </div>
+    </div>
+{% endmacro %}

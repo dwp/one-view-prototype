@@ -1,0 +1,125 @@
+  <div class="app-navigation-content">
+    <nav class="app-navigation govuk-clearfix app-navigation-margin" [attr.data-qa]="'navigation-bar'">
+      <ul class="app-navigation__list app-width-container">
+        
+        <li *ngIf="security?.account?.person || false" class="app-navigation__list-item">
+          <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" [attr.data-qa]="'interactions'" href="#interactions" (click)="navigateTo($event, 'interactions')" data-topnav="Interactions">Interactions</a>
+        </li>
+
+        <li class="app-navigation__list-item">
+          <a class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link" href="#personal-details">Personal Details</a>
+        </li>
+
+        <li *ngIf="hasAddress" class="app-navigation__list-item">
+          <a
+            class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link"
+            [attr.data-qa]="'address-navigation-tab'"
+            href="#address"
+            (click)="navigateTo($event, 'account-address')"
+            data-topnav="Address">
+            Address
+          </a>
+        </li>
+
+        <li
+          *ngIf="security?.account?.contact || false"
+          class="app-navigation__list-item">
+          <a
+            class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link"
+            [attr.data-qa]="'contact-navigation-tab'"
+            href="#contact"
+            (click)="navigateTo($event, 'account-contact')"
+            data-topnav="Contact">
+            Contact
+          </a>
+        </li>
+
+        <li
+          *ngIf="security?.account?.interests || false"
+          class="app-navigation__list-item">
+          <a
+            class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link"
+            [attr.data-qa]="'interests-navigation-tab'"
+            href="#interests"
+            (click)="navigateTo($event, 'account-interests')"
+            data-topnav="Interests">
+            Interests
+          </a>
+        </li>
+
+        <li
+          *ngIf="security?.account?.benefits || false"
+          class="app-navigation__list-item">
+          <a
+            class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link"
+            [attr.data-qa]="'benefits-navigation-tab'"
+            href="#benefits"
+            (click)="navigateTo($event, 'account-benefits')"
+            data-topnav="Benefits">
+            Benefits
+          </a>
+        </li>
+
+        <li
+          *ngIf="security?.account?.relationships || false"
+          class="app-navigation__list-item">
+          <a
+            class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link"
+            [attr.data-qa]="'relationships-navigation-tab'"
+            href="#relationships"
+            (click)="navigateTo($event, 'account-relationships')"
+            data-topnav="Relationships">
+            Relationships
+          </a>
+        </li>
+
+        <li *ngIf="security?.income || false" class="app-navigation__list-item">
+          <a
+            class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link"
+            [attr.data-qa]="'income-navigation-tab'"
+            [routerLink]="['/account/view/income']"
+            [queryParams]="{ id: (ninoId$ | async) }"
+            aria-label="Income">
+            Income
+          </a>
+        </li>
+
+        <li
+          *ngIf="security?.account?.laview || false"
+          class="app-navigation__list-item">
+          <a
+            class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link"
+            [attr.data-qa]="'local-authority-notes-navigation-tab'"
+            [routerLink]="['/account/view/la-notes']"
+            [queryParams]="{ id: model.ninoId }"
+            aria-label="Local Authority Notes">
+            Local authority notes
+          </a>
+        </li>
+
+        <li
+          *ngIf="security?.account?.ladata || false"
+          class="app-navigation__list-item">
+          <a
+            class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link"
+            [attr.data-qa]="'local-authority-data-navigation-tab'"
+            [routerLink]="['/account/view/la-data']"
+            [queryParams]="{ id: model.ninoId }"
+            aria-label="Local Authority Data">
+            Local authority data
+          </a>
+        </li>
+
+        <li *ngIf="model.canViewMobilityData" class="app-navigation__list-item">
+          <a
+            class="govuk-link govuk-link--no-visited-state govuk-link--no-underline app-navigation__link"
+            [attr.data-qa]="'mobility-data-navigation-tab'"
+            [routerLink]="['/account/mobility-data']"
+            [queryParams]="{ id: model.ninoId }"
+            aria-label="Mobility Data">
+            Mobility data
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>

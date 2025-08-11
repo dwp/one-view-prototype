@@ -1,0 +1,14 @@
+{% extends "./main.html" %}
+
+{% block header %}{% endblock %}
+
+{% block footer %}{% endblock %}
+
+{% block beforeContent %}
+{{ 
+    govukBackLink({
+        text: "Back",
+        href: "/"
+  })
+}}
+{% endblock %}

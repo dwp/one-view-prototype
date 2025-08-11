@@ -1,0 +1,30 @@
+@import 'node_modules/govuk-frontend/govuk/settings/_colours-applied';
+
+ul li {
+  color: $govuk-error-colour;
+}
+.govuk-warning-text__icon {
+  display: inline-block;
+  position: absolute;
+  top: 42%;
+  left: 14px;
+  margin-top: -20px;
+  margin-left: 10px;
+}
+
+.govuk-warning-text {
+  background-color: #fdf3de;
+  font-size: 19px;
+  line-height: 1.31579;
+}
+
+.govuk-warning-text__text {
+  display: block;
+  margin-left: 15px;
+  padding-left: 65px;
+}
+
+p {
+  font-weight: normal;
+  margin: 0 0 10px;
+}

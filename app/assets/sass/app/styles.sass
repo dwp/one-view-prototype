@@ -1,0 +1,271 @@
+$govuk-images-path: "/citizen-info/assets/images/"
+$govuk-fonts-path: "/citizen-info/assets/fonts/"
+$govuk-page-width: 1200px !default
+$js-enabled: true
+
+
+@import "sass/gov-uk"
+@import "sass/app"
+
+html
+  scroll-behavior: smooth
+
+.sl-font-bold
+    font-weight: bold
+
+.app-width-container
+    max-width: 2400px
+    margin: 0 5% 1%
+
+.sl-govuk-header
+  border-bottom: 0px
+  @extend .govuk-header
+
+.sl-govuk-header__no-link
+  &:hover
+    border-bottom: 0px
+  @extend .govuk-header__link--homepage
+
+.sl-red-error-bar
+  background-color: $govuk-error-colour
+  padding: 10px
+  &:focus
+    outline: $govuk-focus-width solid $govuk-focus-colour
+    outline-offset: 0
+
+.sl-separator
+  height: 1px
+  background-color: lightgray
+  border: none
+  margin-bottom: 10px
+
+.sl-grid-row
+  color: white
+  font-family: Arial, Helvetica, sans-serif
+  margin-right: 0
+  margin-left: 0
+  @extend .govuk-grid-row
+
+
+.sl-red-error-bar
+  background-color: $govuk-error-colour
+  padding: 10px
+  &:focus
+    outline: $govuk-focus-width solid $govuk-focus-colour
+    outline-offset: 0
+
+.sl-logo-text
+  font-weight: 900
+  font-size: 0.80em
+  text-shadow: 1px 0 #FFFFFF
+
+
+.sl-banner
+  margin-left: 5%
+  margin-right: 5%
+
+// all page content
+.sl-content
+  margin-top: 1%
+  margin-bottom: 1%
+  margin-left: 5%
+  margin-right: 5%
+
+.sl-primary-card
+  background: white
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(212, 181, 181, 0.1)
+  padding: 30px
+  @media (max-width: 750px)
+    padding: 10px 15px 20px 15px
+  @media print
+    background: white
+    box-shadow: 0px 0px 0px 0px white, 0px 0px 0px 0px white
+    padding: 0px
+
+.sl-uppercase
+  text-transform: uppercase
+
+// the standard hint is really big, a small tweak
+.sl-hint
+  font-size: 90%
+  @extend .govuk-hint
+
+// the standard hint is really big, a small tweak
+.sl-hint-error
+  @extend .sl-hint
+  font-weight: bold
+  color: $govuk-error-colour
+
+.sl-pre
+ white-space: pre-wrap
+ white-space: -moz-pre-wrap
+ white-space: -pre-wrap
+ white-space: -o-pre-wrap
+ word-wrap: break-word
+
+// Used to prevent section of the page from being printed
+.sl-not-printable
+    @media print
+        display: none
+
+
+
+.sl-header-color-production
+  background-color: govuk-colour("black")
+  border-bottom-color: govuk-colour("black")
+  border-bottom : 0px
+
+.sl-header-color-dev
+  background-color: govuk-colour("black")
+  border-bottom-color: govuk-colour("black")
+  border-bottom : 0px
+
+.sl-header-color-local
+  background-color: govuk-colour("black")
+  border-bottom-color: govuk-colour("black")
+  border-bottom : 0px
+
+.spacing-top-single
+  padding-top: 30px
+
+.spacing-bottom-single
+  padding-bottom: 30px
+
+.black-text
+  color: black
+
+.warning-spacing
+  margin-bottom: 2px
+
+.warning-message-spacing
+   width: 75%
+   margin-bottom: 0px
+
+.w-100
+  width: 100%
+
+.govuk-mb-30
+  margin-bottom: 30px
+
+.govuk-grey
+  color: $govuk-grey
+
+.govuk-bg-light-grey
+  background-color: govuk-colour("light-grey")
+
+.govuk-tabs__panel
+  background: white
+
+.govuk-mini-groups
+  .govuk-form-group
+    margin-bottom: 0 !important
+  .govuk-hint
+    margin-bottom: 0 !important
+
+@media (min-width: 40.0625em)
+  .js-enabled .govuk-tabs__list-item
+    background-color: #bfc1c3
+  .js-enabled .govuk-tabs__list-item--selected
+    background-color: white
+
+ngneat-dialog
+ .ngneat-dialog-content
+   outline: none !important
+   border: 3px solid $govuk-focus-colour
+
+ .ngneat-dialog-backdrop
+  align-items: flex-start
+
+.no-padding-left
+  padding-left: 0
+
+.float-right
+  float: right
+
+ul.accessibility-list
+  list-style-type: none
+  padding: 0
+
+.spacing-bottom-single
+  padding-bottom: 30px
+
+.col-header
+  text-decoration: none
+  color: $govuk-link-colour
+
+.spacing-top-half
+  padding-top: 15px
+
+.spacing-bottom-half
+  padding-bottom: 15px
+
+.spacing-bottom-third
+  padding-bottom: 10px
+
+.sl-metadata
+  color: $govuk-text-colour
+
+.sl-secondary-text-color
+  color: $govuk-secondary-text-colour
+
+a
+  color: $govuk-link-colour
+  text-decoration: underline
+  &:hover
+    color: $govuk-link-hover-colour
+    cursor: pointer
+  &:active
+    color: $govuk-link-active-colour
+  &:focus
+    color: black
+    background-color: $govuk-focus-colour
+
+.table-top-line
+  border-top: 1px solid govuk-colour("mid-grey")
+
+
+
+.table-top-line
+  border-top: 1px solid govuk-colour("mid-grey")
+
+.margin-top-single
+  margin-top: 30px
+
+.govuk-details__text
+  border-left: 4px solid #ddd
+  margin-left: 5px
+  margin-top: 0
+
+.table-bottom-line
+  border-bottom: 1px solid govuk-colour("mid-grey")
+
+.text-align-right
+  text-align: right
+
+.margin-bottom-0
+  margin-bottom: 0
+  
+.scroll-margin
+  scroll-margin: 100px 0
+
+.scroll-margin-xl
+  padding-top: 10px
+  scroll-margin: 133px 0
+
+#kcis-fragment > .govuk-grid-row > .govuk-grid-column-one-half
+  float: right
+
+.visible-hidden
+  clip: rect(1px, 1px, 1px, 1px)
+  height: 1px
+  overflow: hidden
+  position: absolute
+  white-space: nowrap
+  width: 1px
+
+.visible-hidden:focus
+  clip: auto
+  height: auto
+  overflow: auto
+  position: absolute
+  width: auto

@@ -1,0 +1,20 @@
+
+  <div class="nino-search-container" *ngIf="accessAllowed && featureEnabled">
+    <div class="nino-search">
+      <input
+        type="text"
+        maxLength="10"
+        id="nino-search-input"
+        class="nino-search-maincontent nino-search-input"
+        autocomplete="off"
+        aria-label="search input"
+       />
+      <button
+        id="btn-search"
+        class="nino-search-button"
+        aria-label="search">
+        <em class="fa fa-search"></em>
+      </button>
+    </div>
+  </div>
+

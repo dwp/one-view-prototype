@@ -1,0 +1,12 @@
+.sl-trace-warning-icon,
+.nino-match-warning-icon,
+.name-criteria-failed-warning-icon {
+  background: url(../../assets/images/error-warning-icon.svg);
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  margin-right: 10px;
+  &.float-left {
+    float: left;
+  }
+}

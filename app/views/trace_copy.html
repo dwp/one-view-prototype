@@ -1,0 +1,391 @@
+{% extends "layouts/trace.html" %}
+
+{% set pageName="UI example" %}
+
+{% block main %}
+
+<main id="maincontent" role="main" class="sl-content home-width ">
+
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+
+<h2 class="govuk-heading-l">DWP Person trace</h2>
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+
+      </legend>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="address-line-1">
+          First and middle names
+        </label>
+        <input class="govuk-input" id="address-line-1" name="addressLine1" type="text" autocomplete="address-line1">
+      </div>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="address-line-2">
+          Last name
+        </label>
+        <input class="govuk-input" id="address-line-2" name="addressLine2" type="text" autocomplete="address-line2">
+      </div>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="address-town">
+          Date of birth
+        </label>
+        <input class="govuk-input govuk-input--width-10" id="address-postcode" name="addressPostcode" type="text" autocomplete="postal-code">
+      </div>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="address-postcode">
+          Date of death
+        </label>
+        <input class="govuk-input govuk-input--width-10" id="address-postcode" name="addressPostcode" type="text" autocomplete="postal-code">
+      </div>
+    </fieldset>s
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <h2 class="govuk-heading-m">One-third column</h2>
+    <p class="govuk-body">This is a paragraph inside a one-third wide column</p>
+  </div>
+</div>
+
+
+   <div class="govuk-form-group classes">
+    <govuk-label>
+      <label class="cis-label--s govuk-label" id="lbl-forenames" for="forenames">First and middle names</label>
+    </govuk-label>
+    <input id="forenames" name="forenames" maxlength="70" class="govuk-input ng-pristine ng-valid ng-touched">
+    <govuk-link-action></govuk-link-action>
+
+    <govuk-label>
+      <label class="cis-label--s govuk-label" id="lbl-forenames" for="forenames">Last name</label>
+    </govuk-label>
+    <input id="forenames" name="forenames" maxlength="70" class="govuk-input ng-pristine ng-valid ng-touched">
+    <govuk-link-action></govuk-link-action>
+   </div>
+
+
+
+<app-splash-page _nghost-ng-c554206055="">
+  <div class="home-content"><app-trace-tabs
+      _nghost-ng-c1050611128=""><govuk-tabs _ngcontent-ng-c1050611128="">
+        <ul class="govuk-tabs__list" id="tab-list-code-html">
+          <li class="govuk-tabs__list-item govuk-tabs__list-item--selected" id="tab-list-item-person-trace-tab"><a
+              href="javascript://" class="govuk-tabs__tab" id="tab-link-person-trace-tab"> DWP Person Trace </a></li>
+          <li class="govuk-tabs__list-item" id="tab-list-item-address-trace-tab"><a href="javascript://"
+              class="govuk-tabs__tab" id="tab-link-address-trace-tab"> Address Trace </a></li>
+          <li class="govuk-tabs__list-item" id="tab-list-item-corporg-trace-tab"><a href="javascript://"
+              class="govuk-tabs__tab" id="tab-link-corporg-trace-tab"> Organisation Trace </a></li>
+        </ul><govuk-tab _ngcontent-ng-c1050611128="" data-qa="person-trace-tab">
+          <div class="pane" id="person-trace-tab">
+            <div class="govuk-tabs__panel"><app-person-trace-search-home _ngcontent-ng-c1050611128=""
+                _nghost-ng-c1700246540="">
+                <div ><govuk-error-summary
+                    ></govuk-error-summary>
+                  <form  novalidate="" autocomplete="off"
+                    class="ng-untouched ng-pristine ng-valid">
+                    <h2  id="person-search-title" tabindex="-1" class="govuk-heading-m">
+                      Find someone who has a CIS account </h2>
+                    <hr >
+                    <div  class="govuk-grid-row">
+                      <div  class="govuk-grid-column-two-thirds">
+                        <div  class="govuk-grid-row">
+                          <div  class="govuk-grid-column-one-half"><govuk-input
+                               maxlength="70" tabindex="-1"><govuk-field>
+                                <div class="govuk-form-group classes"><govuk-label><label
+                                      class="cis-label--s govuk-label" id="lbl-forenames" for="forenames">First and
+                                      middle
+                                      names</label></govuk-label><govuk-error></govuk-error><input
+                                    id="forenames" name="forenames" maxlength="70"
+                                    class="govuk-input ng-pristine ng-valid ng-touched"><govuk-link-action></govuk-link-action>
+                                </div>
+                              </govuk-field></govuk-input></div>
+                          <div  class="govuk-grid-column-one-half"><govuk-input
+                               maxlength="35"><govuk-field>
+                                <div class="govuk-form-group classes"><govuk-label><label
+                                      class="cis-label--s govuk-label" id="lbl-surname" for="surname">Last
+                                      name</label></govuk-label><govuk-error></govuk-error><input
+                                    id="surname" name="surname" maxlength="35"
+                                    class="govuk-input ng-untouched ng-pristine ng-valid"><govuk-link-action></govuk-link-action>
+                                </div>
+                              </govuk-field></govuk-input></div>
+                        </div>
+                        <div  class="govuk-grid-row">
+                          <div  class="govuk-grid-column-one-half"><app-date-range
+                               _nghost-ng-c743414869=""><govuk-input
+                                 maxlength="40"><govuk-field>
+                                  <div class="govuk-form-group classes"><govuk-label><label
+                                        class="cis-label--s govuk-label" id="lbl-birthDateRange"
+                                        for="birthDateRange">Date of birth</label></govuk-label><govuk-hint><span
+                                        class="govuk-hint" id="hint-birthDateRange"> For example, 27 Mar 1980
+                                      </span></govuk-hint><govuk-error></govuk-error><input
+                                      id="birthDateRange" name="birthDateRange" maxlength="40"
+                                      class="govuk-input govuk-!-width-full ng-untouched ng-pristine ng-valid"><govuk-link-action></govuk-link-action>
+                                  </div>
+                                </govuk-field></govuk-input></app-date-range></div>
+                          <div  class="govuk-grid-column-one-half">
+                            <div ><app-date-range 
+                                _nghost-ng-c743414869=""><govuk-input 
+                                  maxlength="40"><govuk-field>
+                                    <div class="govuk-form-group classes"><govuk-label><label
+                                          class="cis-label--s govuk-label" id="lbl-deathDateRange"
+                                          for="deathDateRange">Date of
+                                          death</label></govuk-label><govuk-hint><span class="govuk-hint"
+                                          id="hint-deathDateRange"> For example, 16 Dec 2007
+                                        </span></govuk-hint><govuk-error></govuk-error><input
+                                        id="deathDateRange" name="deathDateRange" maxlength="40"
+                                        class="govuk-input govuk-!-width-full ng-untouched ng-pristine ng-valid"><govuk-link-action></govuk-link-action>
+                                    </div>
+                                  </govuk-field></govuk-input></app-date-range></div>
+                          </div>
+                        </div>
+                        <div  class="govuk-grid-row">
+                          <div  class="govuk-grid-column-one-third govuk-!-margin-top-7">
+                            <govuk-input  minlength="3" maxlength="35"><govuk-field>
+                                <div class="govuk-form-group classes"><govuk-label><label
+                                      class="cis-label--s govuk-label" id="lbl-addressLine1" for="addressLine1">First
+                                      line of
+                                      address</label></govuk-label><govuk-error></govuk-error><input
+                                    id="addressLine1" name="addressLine1" maxlength="35"
+                                    class="govuk-input govuk-!-width-full ng-untouched ng-pristine ng-valid"><govuk-link-action></govuk-link-action>
+                                </div>
+                              </govuk-field></govuk-input></div>
+                          <div  class="govuk-grid-column-one-third govuk-!-margin-top-7">
+                            <govuk-input  minlength="3" maxlength="35"><govuk-field>
+                                <div class="govuk-form-group classes"><govuk-label><label
+                                      class="cis-label--s govuk-label" id="lbl-postTown"
+                                      for="postTown">Town</label></govuk-label><govuk-error></govuk-error><input
+                                    id="postTown" name="postTown" maxlength="35"
+                                    class="govuk-input govuk-!-width-full ng-untouched ng-pristine ng-valid"><govuk-link-action></govuk-link-action>
+                                </div>
+                              </govuk-field></govuk-input></div>
+
+                          <div  class="govuk-grid-column-one-third">
+                            <govuk-input maxlength="8">
+                              <govuk-field>
+                                <div class="govuk-form-group classes govuk-!-margin-top-3">
+                                  <govuk-label><label class="cis-label--s govuk-label" id="lbl-postCode" for="postCode">Postcode</label></govuk-label>
+                                  <govuk-hint><span class="govuk-hint" id="hint-postCode"> For example, SW1A 2AA</span></govuk-hint>
+                                  <govuk-error></govuk-error>
+                                  <input id="postCode" name="postCode" maxlength="8" class="govuk-input govuk-!-width-full ng-untouched ng-pristine ng-valid">
+                                  <govuk-link-action></govuk-link-action>
+                                </div>
+                              </govuk-field>
+                            </govuk-input>
+                          </div>
+
+                        </div>
+                        <div  class="govuk-grid-row">
+                          <div  class="govuk-grid-column-one-half"><app-input-sex
+                              >
+                              <div class="govuk-form-group"><govuk-fieldset>
+                                  <div class="govuk-form-group">
+                                    <fieldset class="govuk-fieldset">
+                                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--s" id="fieldset-">
+                                        
+                                        <h2 class="govuk-fieldset__heading"> Sex </h2>
+                                      </legend><govuk-hint><span class="govuk-hint" id="hint-">
+                                        </span></govuk-hint><govuk-error></govuk-error>
+                                      <div class="govuk-checkboxes fa-pull-left">
+                                        <div class="govuk-!-padding-right-5 govuk-checkboxes govuk-checkboxes__item">
+                                          <input type="checkbox"
+                                            class="govuk-!-padding-right-5 govuk-checkboxes govuk-checkboxes__input ng-untouched ng-pristine ng-valid"
+                                            id="sex_MALE_input" name="undefined_MALE"><label
+                                            class="govuk-label govuk-checkboxes__label" for="sex_MALE_input"
+                                            data-qa="checkbox-male"> Male </label></div>
+                                      </div>
+                                      <div class="govuk-checkboxes fa-pull-left">
+                                        <div class="govuk-!-padding-right-5 govuk-checkboxes govuk-checkboxes__item">
+                                          <input type="checkbox"
+                                            class="govuk-checkboxes__input ng-untouched ng-pristine ng-valid"
+                                            id="sex_FEMALE_input" name="undefined_FEMALE"><label
+                                            class="govuk-label govuk-checkboxes__label" for="sex_FEMALE_input"
+                                            data-qa="checkbox-female"> Female </label></div>
+                                      </div>
+                                    </fieldset>
+                                  </div>
+                                </govuk-fieldset></div>
+                            </app-input-sex></div>
+                          <div  class="govuk-grid-column-one-half govuk-!-margin-top-2">
+                            <govuk-input ><govuk-field>
+                                <div class="govuk-form-group classes"><govuk-label><label
+                                      class="cis-label--s govuk-label" id="lbl-contactDetail"
+                                      for="contactDetail">Contact number or
+                                      email</label></govuk-label><govuk-error></govuk-error><input
+                                    id="contactDetail" name="contactDetail" maxlength="50"
+                                    class="govuk-input govuk-!-width-full ng-untouched ng-pristine ng-valid"><govuk-link-action></govuk-link-action>
+                                </div>
+                              </govuk-field></govuk-input></div>
+                        </div>
+                      </div>
+                      <div  class="govuk-grid-column-one-third">
+                        <div  class="govuk-grid-column-full"
+                          style="background-color: #f1f1f1; padding-top: 10px;"><govuk-checkboxes
+                            ><govuk-fieldset>
+                              <div class="govuk-form-group">
+                                <fieldset class="govuk-fieldset">
+                                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--s"
+                                    id="fieldset-search-options">
+                                    <h2 class="govuk-fieldset__heading"> Trace Options </h2>
+                                  </legend><govuk-hint><span class="govuk-hint" id="hint-search-options">
+                                    </span></govuk-hint><govuk-error></govuk-error>
+                                  <div class="govuk-checkboxes">
+                                    <div class="govuk-checkboxes__item"><input type="checkbox"
+                                        class="govuk-checkboxes__input ng-untouched ng-pristine ng-valid"
+                                        id="search-options-0" value="nameRelaxInd"><label
+                                        class="govuk-label govuk-checkboxes__label" for="search-options-0"
+                                        data-qa="search-options-namerelaxind-0"> Relaxed trace </label><govuk-hint><span
+                                          class="govuk-checkboxes__hint govuk-hint"
+                                          id="hint-search-options-nameRelaxInd"> Include similar names
+                                        </span></govuk-hint></div>
+                                    <div class="govuk-checkboxes__item"><input type="checkbox"
+                                        class="govuk-checkboxes__input ng-untouched ng-pristine ng-valid"
+                                        id="search-options-1" value="multiPartInd"><label
+                                        class="govuk-label govuk-checkboxes__label" for="search-options-1"
+                                        data-qa="search-options-multipartind-1"> Multipart surname
+                                      </label><govuk-hint><span class="govuk-checkboxes__hint govuk-hint"
+                                          id="hint-search-options-multiPartInd"> Prefix, hyphen, part name
+                                        </span></govuk-hint></div>
+                                    <div class="govuk-checkboxes__item"><input type="checkbox"
+                                        class="govuk-checkboxes__input ng-untouched ng-pristine ng-valid"
+                                        id="search-options-2" value="historicFlag"><label
+                                        class="govuk-label govuk-checkboxes__label" for="search-options-2"
+                                        data-qa="search-options-historicflag-2"> Historic trace
+                                      </label><govuk-hint><span class="govuk-checkboxes__hint govuk-hint"
+                                          id="hint-search-options-historicFlag"> Include historic entries
+                                        </span></govuk-hint></div>
+                                  </div>
+                                </fieldset>
+                              </div>
+                            </govuk-fieldset></govuk-checkboxes></div>
+                      </div>
+                    </div>
+                    <div  class="govuk-!-margin-top-4"><govuk-button
+                        ><button data-module="govuk-button" id="btn-search-button"
+                          name="search-button" type="button" class="govuk-button govuk-!-margin-right-3"><span> Search
+                          </span></button></govuk-button><govuk-button
+                        ><button data-module="govuk-button" id="btn-clear-button"
+                          name="clear-button" type="button" class="govuk-button govuk-button--secondary"><span> Clear
+                            Search </span></button></govuk-button></div>
+                  </form>
+                </div>
+              </app-person-trace-search-home></div>
+          </div>
+        </govuk-tab><govuk-tab _ngcontent-ng-c1050611128="" data-qa="address-trace-tab">
+          <div class="pane" id="address-trace-tab" hidden="">
+            <div class="govuk-tabs__panel"><app-address-trace-search _ngcontent-ng-c1050611128=""
+                _nghost-ng-c2918796227="">
+                <div _ngcontent-ng-c2918796227="" class="address-trace-search-container"
+                  data-qa="address-trace-search-container">
+                  <div _ngcontent-ng-c2918796227="" class="sl-address-trace-header">
+                    <h2 _ngcontent-ng-c2918796227="" class="govuk-heading-m govuk-!-font-weight-bold"
+                      data-qa="address-trace-search-header"> Search for an address </h2>
+                  </div>
+                  <hr _ngcontent-ng-c2918796227="">
+                  <div _ngcontent-ng-c2918796227="" id="sl-address-trace-forms" class="spacing-top-mid">
+                    <div _ngcontent-ng-c2918796227="" appcontrolerrorcontainer="">
+                      <form _ngcontent-ng-c2918796227="" novalidate=""
+                        class="addressTraceSearch govuk-body ng-untouched ng-pristine ng-invalid">
+                        <div _ngcontent-ng-c2918796227="" appcontrolerrorcontainer="" id="sl-house-name-input"
+                          class="govuk-form-group govuk-body"><label _ngcontent-ng-c2918796227=""
+                            for="sl-address-house-name-input" class="govuk-label" data-qa="sl-address-house-name-label">
+                            Address details </label><label _ngcontent-ng-c2918796227="" class="govuk-hint"
+                            data-qa="sl-address-house-name-input-hint">Enter a comma after each address
+                            line</label><input _ngcontent-ng-c2918796227="" id="sl-address-house-name-input"
+                            name="sl-address-house-name-input" type="text" autocomplete="" formcontrolname="houseName"
+                            class="govuk-input sl-address-house-name-input ng-untouched ng-pristine ng-valid"
+                            data-qa="sl-address-house-name-input"></div>
+                        <div _ngcontent-ng-c2918796227="" appcontrolerrorcontainer="" id="sl-postcode-input"
+                          class="govuk-form-group govuk-body sl-postcode-input"><label _ngcontent-ng-c2918796227=""
+                            for="sl-address-postcode-input" class="govuk-label" data-qa="sl-address-postcode-label">
+                            Postcode </label><label _ngcontent-ng-c2918796227="" class="govuk-hint"
+                            data-qa="sl-address-postcode-input-hint">For example, SW1A 2AA</label><input
+                            _ngcontent-ng-c2918796227="" id="sl-address-postcode-input" name="sl-address-postcode-input"
+                            type="text" autocomplete="off" formcontrolname="postCode"
+                            class="govuk-input sl-address-postcode-input ng-untouched ng-pristine ng-valid"
+                            data-qa="sl-address-postcode-input"></div>
+                        <div _ngcontent-ng-c2918796227="" class="govuk-!-margin-top-4"><button
+                            _ngcontent-ng-c2918796227="" type="submit"
+                            class="govuk-button address-trace-search-btn govuk-!-margin-right-2"
+                            id="address-trace-search-btn" data-qa="address-trace-search-btn"> Search </button></div>
+                        
+                      </form>
+                    </div><app-section-loading _ngcontent-ng-c2918796227=""
+                      _nghost-ng-c1011770569=""></app-section-loading>
+                  </div>
+                </div>
+              </app-address-trace-search></div>
+          </div>
+        </govuk-tab><govuk-tab _ngcontent-ng-c1050611128="" data-qa="corporg-trace-tab">
+          <div class="pane" id="corporg-trace-tab" hidden="">
+            <div class="govuk-tabs__panel"><app-corporg-trace-search _ngcontent-ng-c1050611128=""
+                _nghost-ng-c1515847987="">
+                <div _ class="corporg-trace-search-container"
+                  data-qa="corporg-trace-search-container">
+                  <div _ class="sl-corporg-trace-header">
+                    <h2 _ class="govuk-heading-m govuk-!-font-weight-bold"
+                      data-qa="corporg-trace-search-header"> Search for an organisation </h2>
+                  </div>
+                  <hr _>
+                  <div _ id="sl-corporg-trace-forms" class="spacing-top-mid">
+                    <div >
+                      <form _ novalidate=""
+                        class="govuk-body ng-untouched ng-pristine ng-invalid">
+                        <div  id="sl-corporg-organisation-name"
+                          class="govuk-form-group govuk-body"><label _
+                            for="sl-corporg-organisation-name-input" class="govuk-label"
+                            data-qa="sl-corporg-organisation-name-label"> Organisation name </label><input
+                            _ id="sl-corporg-organisation-name-input"
+                            name="sl-corporg-organisation-name-input" type="text" autocomplete=""
+                            formcontrolname="organisationName"
+                            class="govuk-input sl-corporg-organisation-name-input ng-untouched ng-pristine ng-valid"
+                            data-qa="sl-corporg-organisation-name-input"></div>
+                        <div  id="sl-corporg-address-line-1"
+                          class="govuk-form-group govuk-body"><label _
+                            for="sl-corporg-address-line-1-input" class="govuk-label"
+                            data-qa="sl-corporg-address-line-1-label"> First line of address </label><input
+                            _ id="sl-corporg-address-line-1-input"
+                            name="sl-corporg-address-line-1-input" type="text" autocomplete="off"
+                            formcontrolname="addressLine1"
+                            class="govuk-input sl-corporg-address-line-1-input ng-untouched ng-pristine ng-valid"
+                            data-qa="sl-corporg-address-line-1-input"></div>
+                        <div  id="sl-corporg-postcode"
+                          class="govuk-form-group govuk-body"><label _
+                            for="sl-corporg-postcode-input" class="govuk-label" data-qa="sl-corporg-postcode-label">
+                            Postcode </label><label _ class="govuk-hint"
+                            data-qa="sl-address-postcode-input-hint">For example, SW1A 2AA</label><input
+                            _ id="sl-corporg-postcode-input" name="sl-corporg-postcode-input"
+                            type="text" autocomplete="off" oninput="this.value = this.value.toUpperCase()"
+                            formcontrolname="postCode"
+                            class="govuk-input sl-corporg-postcode-input ng-untouched ng-pristine ng-valid"
+                            data-qa="sl-corporg-postcode-input"></div>
+                        <div  id="sl-corporg-countrycode"
+                          class="govuk-form-group govuk-body"><label _
+                            for="sl-corporg-countrycode-input" class="govuk-label"
+                            data-qa="sl-corporg-countrycode-label"> Country code </label><input
+                            _ id="sl-corporg-countrycode-input"
+                            name="sl-corporg-countrycode-input" type="text" autocomplete="off"
+                            oninput="this.value = this.value.toUpperCase()" formcontrolname="countryCode"
+                            class="govuk-input sl-corporg-countrycode-input ng-untouched ng-pristine ng-valid"
+                            data-qa="sl-corporg-countrycode-input"></div>
+                        <div _ class="govuk-!-margin-top-4 govuk-button-group"><button
+                            _ type="submit"
+                            class="govuk-button govuk-!-margin-right-3 corporg-trace-search-btn"
+                            id="corporg-trace-search-btn" data-qa="corporg-trace-search-btn"> Search
+                          </button><button _ type="reset"
+                            class="govuk-button govuk-button--secondary corporg-trace-clear-btn"
+                            id="corporg-trace-clear-btn" data-qa="corporg-trace-clear-btn"> Clear Search
+                          </button></div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </app-corporg-trace-search></div>
+          </div>
+        </govuk-tab>
+      </govuk-tabs></app-trace-tabs></div>
+</app-splash-page>
+
+</main>
+
+{% endblock %}
