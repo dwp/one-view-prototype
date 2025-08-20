@@ -1,21 +1,47 @@
-<footer class="govuk-footer sl-not-printable" role="contentinfo">
+<footer class="govuk-footer sl-not-printable ov-footer" role="contentinfo">
 
   <div class="app-width-container home-width">
-    <div class="govuk-grid-row">
+    <div class="govuk-grid-row ov-footer__links">
       <div class="govuk-grid-column-two-thirds">
-        <p id="sl-footer-feedback" class="govuk-!-font-weight-bold">This is a new service - your <a class="govuk-link" link="#">feedback</a> will help us improve it.</p>
-        <p id="sl-footer-accessibility" class="govuk-!-font-weight-bold">Read our <a class="govuk-link" link="#">Accessibility Statement</a>.</p>
+
+        <ul class="govuk-footer__inline-list">
+          <li class="govuk-footer__inline-list-item">
+            <a class="govuk-footer__link" href="#">Accessibility statement</a>
+          </li>
+          <li class="govuk-footer__inline-list-item">
+            <a class="govuk-footer__link" href="#">Privacy</a>
+          </li>
+        </ul>
+        <ul class="govuk-footer__inline-list"></ul>
+          <li class="govuk-footer__inline-list-item">
+            <a class="govuk-footer__link" href="#">Feedback</a>
+          </li>
+          <li class="govuk-footer__inline-list-item">
+            <a class="govuk-footer__link" href="#">Health status</a>
+          </li>
+          <li class="govuk-footer__inline-list-item">
+            <a class="govuk-footer__link" href="#">New features</a>
+          </li>
+        </ul>
+
       </div>
     </div>
     
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <p>Built by DWP Digital.</p>
+        <p class="ov-footer">Built by DWP Digital.</p>
+        <!-- Searchlight persona 004 will have the following access combo -->
+        <img hieght="20px" width="20px" src="/public/images/002-flamingo.png" alt="User role 002 icon - Flamingo"> <!-- CIS-002 Shows current and historic-->
+
+        <span class="sl-role-color-block" style="background-color: blue"></span> <!-- CIS-101 Person trace-->
+        <span class="sl-role-color-block" style="background-color: thistle"></span> <!-- CIS-121 Keep customer interactions safe-->
+        <span class="sl-role-color-block" style="background-color: hotpink"></span> <!-- CIS-133 CSP payment button-->
+
       </div>
       <div class="govuk-grid-column-one-third">
-        <div class="govuk-footer__meta-item" style="" id="sl-footer-version" [attr.data-qa]="'sl-footer-version'">
-          <p class="ov-footer-copyright">© Copyright | Prototype V.1.0</p>
-      </div>
+
+          <p class="ov-footer-copyright ov-footer">© Copyright | Prototype V.1.0</p>
+   
       </div>
     </div>
   </div>
