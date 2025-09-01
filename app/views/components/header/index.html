@@ -1,0 +1,25 @@
+<div id="topofpage">
+    <a href="#maincontent" class="govuk-skip-link" (click)="skipToMainContent($event)" (keydown.space)="skipToMainContent($event)" tabindex="0" role="link">
+      Skip to main content
+    </a>
+</div>
+
+<div class="sticky-header">
+  <header class="sl-govuk-header sl-not-printable" role="banner" data-module="govuk-header">
+    <div class="govuk-header__container app-width-container sl-header-color-production home-width">
+      <div class="sl-flex-row sl-nav-wrapper">
+        <div style="width: 100%">
+          <div class="govuk-header__logo" style="display: inline-block; padding-right: 0">
+            <a tabindex="0" role="link" *ngIf="model.headerBarConfig.EnableHomePageLink" href="./" class="govuk-header__link govuk-header__link--homepage">
+              <span class="govuk-header__logotype">
+                <span class="sl-logo-text">
+                  One view
+                </span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+</div>
