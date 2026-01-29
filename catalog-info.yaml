@@ -2,7 +2,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: prototype.interface.one-view-prototype
-  title: one-view-prototype
+  title: One-View-Prototype
   description: |
     TODO: add description for one-view-prototype.
 
