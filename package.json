@@ -8,6 +8,7 @@
     "@dwp/dwp-frontend": "3.3.0",
     "@govuk-prototype-kit/common-templates": "2.0.1",
     "@govuk-prototype-kit/step-by-step": "2.2.3",
+    "axios": "^1.13.5",
     "find-an-address-plugin": "github:dwp/find-an-address-plugin",
     "govuk-frontend": "5.10.1",
     "govuk-prototype-kit": "13.19.0",
