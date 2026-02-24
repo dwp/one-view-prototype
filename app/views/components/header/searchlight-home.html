@@ -1,0 +1,94 @@
+<div id="topofpage">
+    <a
+      href="#maincontent"
+      class="govuk-skip-link"
+      (click)="skipToMainContent($event)"
+      (keydown.space)="skipToMainContent($event)"
+      tabindex="0"
+      role="link"
+      >Skip to main content</a
+    >
+  </div>
+
+      <div class="sticky-header">
+        <header
+          class="sl-govuk-header sl-not-printable"
+          role="banner"
+          data-module="govuk-header">
+          <div
+            class="govuk-header__container sl-header-color-production home-width">
+            <div class="sl-flex-row sl-nav-wrapper">
+              <div style="width: 100%">
+                
+
+                <div _ngcontent-ng-c2458210892="" class="govuk-header__container sl-header-color-production">
+                  <div _ngcontent-ng-c2458210892="" class="sl-flex-row sl-nav-wrapper">
+                    <div _ngcontent-ng-c2458210892="" class="govuk-header__logo home-page-link"><a _ngcontent-ng-c2458210892=""
+                        tabindex="0" role="link" href="./" class="govuk-header__link govuk-header__link--homepage"><span
+                          _ngcontent-ng-c2458210892="" class="govuk-header__logotype"><span _ngcontent-ng-c2458210892=""
+                            id="searchlight-title" class="sl-logo-text">Searchlight</span></span><!----></a><!----><!----><!----></div>
+                    <!---->
+                    <div _ngcontent-ng-c2458210892="" class="sl-flex-row sl-flex-gap-5 sl-nav-align-center app-menu-container"><app-menu
+                        _ngcontent-ng-c2458210892="" _nghost-ng-c413419882="">
+                        <div _ngcontent-ng-c413419882="" class="dropdown" style="float: right;"><button _ngcontent-ng-c413419882=""
+                            id="drop-down-menu" class="dropbtn" style="font-weight: bold;"> Menu <em _ngcontent-ng-c413419882=""
+                              id="drop-down-menu-caret" class="fa fa-caret-down"></em></button><!----></div><!----><!---->
+                      </app-menu><!----></div>
+                  </div>
+                </div>
+
+  
+                {# TODO: app search 
+                <app-nino-search
+                  [isHomePage]="false"
+                  *ngIf="model.headerBarConfig.NinoSearchBar"></app-nino-search>
+                #}
+                <!-- // The Menu link is removed in version 5 of the design all integrations will be on the home page and footer//<div
+                  class="sl-flex-row sl-flex-gap-5 sl-nav-align-center app-menu-container">
+
+                  {%
+                    include "../menu/menu.component.html"
+                  %}
+                  {# TODO: menu 
+                  <app-menu *ngIf="model.headerBarConfig.Menu"></app-menu>
+                #}
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </header>
+  
+        <div class="phase-banner-container">
+          <div class="app-width-container govuk-phase-banner govuk-phase-banner__home sl-not-printable home-width">
+            <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag"> BETA </strong><span
+                class="govuk-phase-banner__text"> This is a new service - your <a class="govuk-link" href="/feedback-page">
+                  feedback</a> will help us to improve it. </span></p>
+          </div>
+        </div>
+
+  </div>
+
+
+  <app-jumbo-nino-search-bar>
+    <head >
+      <title >Searchlight - Home - Beta</title>
+    </head>
+    <div class="jumbotron">
+      <div class="jumbotron-content">
+        <h1 tabindex="-1" class="maincontent govuk-heading-l search-title"> Enter a National Insurance number or Organisation number</h1>
+        <div>
+          <app-nino-search>
+            <form action="searchlight-customer-record" method="post"</form>
+            <div class="nino-search-container">
+              <div class="nino-search">
+                <input  type="text" maxlength="10" id="nino-search-input" autocomplete="off" name="nino-search" aria-label="search input" class="nino-search-maincontent nino-search-input ng-untouched ng-pristine ng-valid" placeholder="Enter a National Insurance or Organisation number">
+                <button id="btn-search" aria-label="search" class="nino-search-button"><em class="fa fa-search"></em></button>
+              </div>
+            </div>
+          </app-nino-search>
+        </div>
+        <div class="jumbotron-link">
+      </div>
+      </div>
+    </div>
+  </app-jumbo-nino-search-bar>
