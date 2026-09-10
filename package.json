@@ -12,7 +12,7 @@
     "axios": "1.20.0",
     "find-an-address-plugin": "@dwp/find-an-address-plugin",
     "govuk-frontend": "5.14.0",
-    "govuk-prototype-kit": "13.20.2",
+    "govuk-prototype-kit": "13.20.4",
     "hmrc-frontend": "6.117.0",
     "jquery": "3.7.1",
     "notifications-node-client": "8.5.0"
